@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+import cv2
+
+NUM_SRC_FILES = 1
+
+COMPRESS_NUM_GENERATIONS = 50
+COMPRESS_SPECS           = [ 100, 90, 80, 70, 60, 50, 40, 30, 20, 10 ]
+COMPRESS_NUM_SPECS       = len(COMPRESS_SPECS)
+
+RESIZE_STRATEGIES = {
+    'NEAREST'   : cv2.INTER_NEAREST,
+    'LINEAR'    : cv2.INTER_LINEAR,
+    'AREA'      : cv2.INTER_AREA,
+    'CUBIC'     : cv2.INTER_CUBIC,
+    'LANCZOS4'  : cv2.INTER_LANCZOS4,
+    'LINEAR_EX' : cv2.INTER_LINEAR_EXACT,
+}
+
+RESIZE_NUM_STRATEGIES = len(RESIZE_STRATEGIES)
+
+RESIZE_SCENARIOS = [
+    [  80, 120, 150,  50 ],
+    [  95,  95,  90,  90 ],
+    [ 150,  50, 150,  50 ],
+    [  50, 150,  50, 150 ],
+    [ 200,  50, 200,  50 ],
+    [  50, 200,  50, 200 ]
+]
+
+RESIZE_NUM_SCENARIOS = len(RESIZE_SCENARIOS)
+
